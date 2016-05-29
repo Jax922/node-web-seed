@@ -1,0 +1,13 @@
+nav.navbar.navbar-default
+	.container-fluid
+		.navbar-header
+			a.navbar-brand nws-brand
+		.collapse.navbar-collapse
+			.nav.navbar-nav
+				for nav in navs 
+					- if (nav.active)
+						li.active
+							a(href=nav.url) #{nav.name}
+					- else
+						li
+							a(href=nav.url) #{nav.name}
